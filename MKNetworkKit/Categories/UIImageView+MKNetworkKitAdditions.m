@@ -24,6 +24,8 @@
 //  THE SOFTWARE.
 
 #import "UIImageView+MKNetworkKitAdditions.h"
+#import "MKNetworkEngine.h"
+#import "MKNetworkOperation.h"
 
 #import <objc/runtime.h>
 
@@ -85,8 +87,7 @@ const float kFreshLoadAnimationDuration = 0.35f;
                                        DLog(@"%@", error);
                                      }];
   } else {
-    
-    DLog(@"No default engine found and imageCacheEngine parameter is null")
+    DLog(@"No default engine found and imageCacheEngine parameter is null");
   }
   
   return self.imageFetchOperation;
